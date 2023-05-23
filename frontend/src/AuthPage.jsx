@@ -4,7 +4,7 @@ const AuthPage = (props) => {
     const onSubmit = (e) => {
       e.preventDefault();
       const { value } = e.target[0];
-      axios.post('http://localhost:3000/auth',
+      axios.post('https://react-chating-app.onrender.com/auth',
       {username:value}
       )
       .then(r => props.onAuth({...r.data, secret:value}))
